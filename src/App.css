@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+@font-face {
+	font-family: "adolfine";
+    src: url("./assets/fonts/Adolfine Regular.otf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@property --primaryLightBlue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #CAF0F8;
+}
+@property --secondaryLightBlue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #90E0EF;
+}
+@property --neutralBlue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #00B4D8;
+}
+@property --secondaryDarkBlue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #0077B6;
+}
+@property --primaryDarkBlue {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #03045E;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    color: var(--primaryDarkBlue);
+    font-family: adolfine;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body, html{
+    background-color: var(--primaryLightBlue);
 }
