@@ -1,0 +1,18 @@
+Header
+    Filter Button
+    Dark Mode Button
+
+Main
+    Todo List Container
+    List Item
+    Add Item button
+    Remove Item(s) button
+
+Backend:
+    Persisting TodoList state
+
+Frontend:
+   Animations
+   Drag and Drop sorting
+   Styling (https://coolors.co/03045e-0077b6-00b4d8-90e0ef-caf0f8)
+   Mobile Styling
