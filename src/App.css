@@ -28,6 +28,16 @@
     inherits: false;
     initial-value: #03045E;
 }
+@property --primaryRed {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #d20a7b;
+}
+@property --secondaryRed {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ed75b9;
+}
 
 h1 {
     color: var(--primaryDarkBlue);
