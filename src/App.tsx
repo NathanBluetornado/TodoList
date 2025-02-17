@@ -8,8 +8,10 @@ import useStorage from './hooks/useStorage';
 
 function App() {
     const [list, setList] = useState<ITodoList>( {title:"Priority", items:[]} );
+    const [secondList, setSecondList] = useState<ITodoList>( {title:"Backburner", items:[]} );
 
     useStorage(list, setList)
+    useStorage(secondList, setSecondList)
 
     return (
         <div className="App">
@@ -17,8 +19,12 @@ function App() {
                 <h1>
                     To-do list:
                 </h1>
-                <TodoList list={list} setList={setList} />
             </header>
+            
+            <main>
+                <TodoList list={list} setList={setList}/>
+                <TodoList list={secondList} setList={setSecondList}/>
+            </main>
         </div>
     );
 }

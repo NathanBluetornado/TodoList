@@ -1,7 +1,32 @@
 .list div{
+    background-color: var(--secondaryLightBlue);
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    
+    width: 70%;
+    
+    max-height: 70px;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.list h2{
+    font-size: 2em;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+.list{
+    background-color: var(--tertiaryLightBlue);
+    align-items: center;
     width: 40%;
+    border-radius: 20px;
+    margin: 5%;
+    padding: 10px;
+
+    font-family: adolfine;
+    font-style: bold;
 }

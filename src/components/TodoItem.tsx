@@ -10,7 +10,7 @@ export default function TodoItem({ id, item, updater, deleting }: TodoItemParams
         <li className="item">
             {!deleting && <Checkbox checked={item.complete} setChecked={( (newValue: boolean) => updater(id, newValue))}/> }
             {deleting && <DeleteButton item={item} deleter={updater} />}            
-            <h2>{item.title}</h2>
+            <h3>{item.title}</h3>
         </li>
     );
 };

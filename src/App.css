@@ -13,6 +13,11 @@
     inherits: false;
     initial-value: #90E0EF;
 }
+@property --tertiaryLightBlue{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #d7f4fb;
+}
 @property --neutralBlue {
     syntax: "<color>";
     inherits: false;
@@ -47,4 +52,8 @@ h1 {
 
 body, html{
     background-color: var(--primaryLightBlue);
+}
+
+main{
+    display: flex;
 }
