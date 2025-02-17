@@ -6,7 +6,7 @@ import { ITodoItem } from '../types/TodoItem';
 
 import TodoItem from '../components/TodoItem';
 
-export default function TodoList({ title, items, setList }: TodoListParams) {
+export default function TodoList({ list, setList }: TodoListParams) {
 
     const [addButtonVisibility , setAddButtonVisibility] = useState<boolean>(false)
     const toggleAddItemVisibility = () => setAddButtonVisibility( (v:boolean) => !v)
@@ -53,7 +53,7 @@ export default function TodoList({ title, items, setList }: TodoListParams) {
         <div className="list">
             <div>
                 <button onClick={()=> toggleDeleteButtonVisibility()}>-</button>
-                <h2>{title}</h2>
+                <h2>{list.title}</h2>
                 <button onClick={()=> toggleAddItemVisibility() }>+</button>
                 { addButtonVisibility && <form onSubmit={addButtonOnSubmit}>
                     <input name="addListItem"/>
@@ -61,7 +61,7 @@ export default function TodoList({ title, items, setList }: TodoListParams) {
             </div>
             <ul>
             {
-                items.map( (item, index) => {
+                list.items.map( (item, index) => {
                     return <TodoItem id={index} item={item}
                     updater={deleteButtonVisibility ? deleteItem : toggleChecked} 
                     deleting={deleteButtonVisibility} key={index}/>

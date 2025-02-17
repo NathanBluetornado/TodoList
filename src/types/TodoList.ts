@@ -6,8 +6,7 @@ interface ITodoList {
 }
 
 interface TodoListParams {
-    title: string;
-    items: ITodoItem[];
+    list: ITodoList
     setList: Function;
 }
 

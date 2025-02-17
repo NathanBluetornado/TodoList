@@ -9,7 +9,7 @@ X   Add Item button
 X   Remove Item(s) button
 
 Backend:
-    Persisting TodoList state
+X    Persisting TodoList state
 
 Frontend:
    Animations
