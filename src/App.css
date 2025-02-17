@@ -61,3 +61,15 @@ body, html{
         align-items: flex-start;
     }
 }
+
+h1{
+    background-color: var(--secondaryLightBlue);
+    
+    width: 330px;
+    height: 60px;
+    max-height: 60px;
+
+    border-radius: 20px;
+    margin: 20px auto 0 auto;
+    padding-top: 10px;
+}
