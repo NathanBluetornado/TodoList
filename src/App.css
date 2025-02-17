@@ -54,6 +54,10 @@ body, html{
     background-color: var(--primaryLightBlue);
 }
 
-main{
-    display: flex;
+@media (min-width: 1250px) {
+    main{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
