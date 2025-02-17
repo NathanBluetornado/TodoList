@@ -17,6 +17,7 @@ const useStorage = (list: ITodoList, updateList: Function) => {
                 return curList
             }
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect( () => {

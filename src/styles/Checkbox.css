@@ -1,13 +1,18 @@
 .checkbox {
-    display: inline-block;
+    display: flex;
     height: 35px;
     width: 35px;
     border: 4px var(--primaryDarkBlue) solid;
     margin-right: 4px;
     border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
 }
 
-.checkbox--active {
+.checkbox span {
+    display: inline-block;
+    border-radius: 50%;
     background: var(--primaryDarkBlue);
 }
 
