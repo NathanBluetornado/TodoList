@@ -1,6 +1,14 @@
-import { TodoItem } from "./TodoItem";
+import { ITodoItem } from "./TodoItem";
 
-export interface TodoList {
+interface ITodoList {
     title: string;
-    items: TodoItem[];
+    items: ITodoItem[];
 }
+
+interface TodoListParams {
+    title: string;
+    items: ITodoItem[];
+    setList: Function;
+}
+
+export type {ITodoList, TodoListParams}
