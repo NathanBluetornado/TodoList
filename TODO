@@ -6,7 +6,7 @@ Main
 X   Todo List Container
 X   List Item
 X   Add Item button
-    Remove Item(s) button
+X   Remove Item(s) button
 
 Backend:
     Persisting TodoList state

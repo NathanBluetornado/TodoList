@@ -4,10 +4,10 @@ interface ITodoItem {
 }
 
 interface TodoItemParams {
-    id: number
-    title: string;
-    complete: boolean;
+    id: number;
+    item: ITodoItem;
     updater: Function;
+    deleting: boolean;
 }
 
 export type {ITodoItem, TodoItemParams}
