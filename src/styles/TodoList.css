@@ -43,3 +43,16 @@
     color: var(--secondaryLightBlue);
     background-color: var(--secondaryDarkBlue);
 }
+
+.list .itemInput {
+    background-color: var(--tertiaryLightBlue);
+    border-color: var(--secondaryDarkBlue);
+    border: 3px solid;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin-left: 40px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 10px;
+    line-height: 2em;
+}

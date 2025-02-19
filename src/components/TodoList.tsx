@@ -55,9 +55,6 @@ export default function TodoList({ list, setList }: TodoListParams) {
                 <button onClick={()=> toggleDeleteButtonVisibility()}>-</button>
                 <h2>{list.title}</h2>
                 <button onClick={()=> toggleAddItemVisibility() }>+</button>
-                { addButtonVisibility && <form onSubmit={addButtonOnSubmit}>
-                    <input name="addListItem"/>
-                </form>}
             </div>
             <ul>
             {
@@ -67,6 +64,12 @@ export default function TodoList({ list, setList }: TodoListParams) {
                     deleting={deleteButtonVisibility} key={index}/>
                 })
             }
+                
+            { addButtonVisibility && 
+                <form onSubmit={addButtonOnSubmit}>
+                    <input className="itemInput" name="addListItem"/>
+                </form>
+                }
             </ul>
         </div>
     );
