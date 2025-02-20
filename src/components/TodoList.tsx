@@ -6,7 +6,7 @@ import { ITodoItem } from '../types/TodoItem';
 
 import TodoItem from '../components/TodoItem';
 
-export default function TodoList({ list, setList }: TodoListParams) {
+export default function TodoList({ list, setList, filters }: TodoListParams) {
 
     const [addButtonVisibility , setAddButtonVisibility] = useState<boolean>(false)
     const toggleAddItemVisibility = () => setAddButtonVisibility( (v:boolean) => !v)
@@ -58,10 +58,14 @@ export default function TodoList({ list, setList }: TodoListParams) {
             </div>
             <ul>
             {
+                // eslint-disable-next-line array-callback-return
                 list.items.map( (item, index) => {
-                    return <TodoItem id={index} item={item}
-                    updater={deleteButtonVisibility ? deleteItem : toggleChecked} 
-                    deleting={deleteButtonVisibility} key={index}/>
+                    if( (item.complete && filters.showComplete) ||
+                        (!item.complete && filters.showIncomplete) ){
+                        return <TodoItem id={index} item={item}
+                        updater={deleteButtonVisibility ? deleteItem : toggleChecked} 
+                        deleting={deleteButtonVisibility} key={index}/>
+                    }
                 })
             }
                 

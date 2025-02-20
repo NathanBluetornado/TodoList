@@ -1,3 +1,4 @@
+import { IFilterButton } from "./FilterButton";
 import { ITodoItem } from "./TodoItem";
 
 interface ITodoList {
@@ -6,8 +7,9 @@ interface ITodoList {
 }
 
 interface TodoListParams {
-    list: ITodoList
+    list: ITodoList;
     setList: Function;
+    filters: IFilterButton;
 }
 
 export type {ITodoList, TodoListParams}
