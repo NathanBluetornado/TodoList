@@ -1,6 +1,11 @@
 # Todo List Web App
 
 A stylish react todo list app with persisting data in localstorage.
+
+
+Deployed at: https://todo.nathanbokobza.com/
+
+
 ![Todo List App Image](TodoList.png)
 
 ## Approach

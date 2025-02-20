@@ -1,5 +1,5 @@
 Header
-    Filter Button
+X   Filter Button
     Dark Mode Button
 
 Main
@@ -12,7 +12,7 @@ Backend:
 X    Persisting TodoList state
 
 Frontend:
-   Animations
+X  Animations
    Drag and Drop sorting
-   Styling (https://coolors.co/03045e-0077b6-00b4d8-90e0ef-caf0f8)
-   Mobile Styling
+X  Styling (https://coolors.co/03045e-0077b6-00b4d8-90e0ef-caf0f8)
+X  Mobile Styling
