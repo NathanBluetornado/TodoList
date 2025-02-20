@@ -1,4 +1,4 @@
-import { useSpring, a, AnimatedProps, SpringValues } from '@react-spring/web';
+import { useSpring, a } from '@react-spring/web';
 import '../styles/Checkbox.css'
 import { CheckBox } from "../types/CheckBox";
 import { useLayoutEffect } from 'react';
@@ -23,8 +23,8 @@ export default function Checkbox({ checked, setChecked} : CheckBox) {
     // const [topDiskPop, setTopDiskPop] = useSpring(() => ({ right: '10em'}))
 
     return (
-    <label>
-        <input type="checkbox" onChange={() => { setChecked(!checked); }} />
+    <label className="checkboxLabel">
+        <input type="checkbox" onChange={() => { setChecked(!checked) }} />
         <span
         className={"checkbox"}
         // This element is purely decorative so
