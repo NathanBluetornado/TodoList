@@ -19,8 +19,12 @@ export default function TodoList({ list, setList, filters }: TodoListParams) {
         const formData = new FormData(form);
         const formJson = Object.fromEntries(formData.entries());
 
-        toggleAddItemVisibility();
-        addItem({title: formJson.addListItem.toString(), complete: false})
+        const newItemTitle = formJson.addListItem.toString()
+
+        if (/\S/.test(newItemTitle)){
+            toggleAddItemVisibility();
+            addItem({title:newItemTitle, complete: false})
+        }
     }
 
     const addItem = (item : ITodoItem) => {
