@@ -8,13 +8,15 @@ import FilterButton from './components/FilterButton';
 
 import useStorage from './hooks/useStorage';
 
+import filterIcon from './assets/flipButton.png'
+
 function App() {
     const [list, setList] = useState<ITodoList>( {title:"Priority", items:[]} );
     const [secondList, setSecondList] = useState<ITodoList>( {title:"Backburner", items:[]} );
     const [dayList, setDayList] = useState<ITodoList>( {title:"Today", items:[]} );
     const [filters, setFilters] = useState<IFilterButton>( {showIncomplete:true, showComplete: true} );
 
-    const [direction, flipDirection] = useState(true);
+    const [direction, flipDirection] = useState(false);
 
     useStorage(list, setList)
     useStorage(secondList, setSecondList)
@@ -29,9 +31,11 @@ function App() {
                 </h1>
                 {/* Div below to center flex arrangement as a placeholder for dark mode button */}
                 {/* <div style={{width:"70px"}}></div> */}
-                <button onClick={() => {
+                <button className="filter" onClick={() => {
                     flipDirection(!direction)
-                }}>flip</button>
+                }}>
+                    <img src={filterIcon} alt="Filter button"/>
+                </button>
             </header>
             
             <main style={{flexFlow: direction ? "wrap-reverse" : ""}}>
