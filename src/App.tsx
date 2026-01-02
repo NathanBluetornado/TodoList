@@ -11,10 +11,14 @@ import useStorage from './hooks/useStorage';
 function App() {
     const [list, setList] = useState<ITodoList>( {title:"Priority", items:[]} );
     const [secondList, setSecondList] = useState<ITodoList>( {title:"Backburner", items:[]} );
+    const [dayList, setDayList] = useState<ITodoList>( {title:"Today", items:[]} );
     const [filters, setFilters] = useState<IFilterButton>( {showIncomplete:true, showComplete: true} );
+
+    const [direction, flipDirection] = useState(true);
 
     useStorage(list, setList)
     useStorage(secondList, setSecondList)
+    useStorage(dayList, setDayList)
 
     return (
         <div className="App">
@@ -24,12 +28,16 @@ function App() {
                     To-do list:
                 </h1>
                 {/* Div below to center flex arrangement as a placeholder for dark mode button */}
-                <div style={{width:"70px"}}></div>
+                {/* <div style={{width:"70px"}}></div> */}
+                <button onClick={() => {
+                    flipDirection(!direction)
+                }}>flip</button>
             </header>
             
-            <main>
+            <main style={{flexFlow: direction ? "wrap-reverse" : ""}}>
                 <TodoList list={list} setList={setList} filters={filters}/>
                 <TodoList list={secondList} setList={setSecondList} filters={filters}/>
+                <TodoList list={dayList} setList={setDayList} filters={filters}/>
             </main>
         </div>
     );
